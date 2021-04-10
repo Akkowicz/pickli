@@ -1,2 +1,21 @@
-{% extends "layout.html" %}
-{% block content %}This is home{% endblock %}
+{% extends "layout.html" %} {% block content %}
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <h2>Add post</h2>
+    </div>
+    <div class="col-md-12 col-lg-12">
+      <form action="/" method="post">
+        {% csrf_token %}
+        {{ form }}
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  {% endblock %}
+</div>
